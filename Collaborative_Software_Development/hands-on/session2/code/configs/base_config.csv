@@ -1,0 +1,8 @@
+key,value
+nx,64
+ny,64
+D,0.1
+vx,0.5
+vy,0.0
+dt,0.01
+nsteps,2000
