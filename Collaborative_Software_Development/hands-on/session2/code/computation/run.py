@@ -112,15 +112,15 @@ def run_simulation(
 
         if j % 200 == 0:
             csv_path = output_dir / f"field_{j}.csv"
-    write_field_csv(csv_path, u)
+            write_field_csv(csv_path, u)
 
-    if make_plot:
+            if make_plot:
                 plot_path = output_dir / f"field_{j}.png"
-        title = (
-            f"Advection–diffusion (D={cfg.D}, vx={cfg.vx}, vy={cfg.vy}, "
+            title = (
+                f"Advection–diffusion (D={cfg.D}, vx={cfg.vx}, vy={cfg.vy}, "
                     f"dt={cfg.dt}, step={j})"
-        )
-        plot_field(u, out_path=plot_path, title=title)
+            )
+            plot_field(u, out_path=plot_path, title=title)
 
 def main() -> None:
     args = parse_args()
